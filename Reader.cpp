@@ -7,7 +7,7 @@
 int main() {
 
     std::string fileName = "mp_hijacked.c2m";
-    std::ifstream fileStream("mp_hijacked.c2m", std::ios::in | std::ios::binary);
+    std::ifstream fileStream(fileName, std::ios::in | std::ios::binary);
 
     if (!fileStream.is_open())
     {
