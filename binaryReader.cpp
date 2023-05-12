@@ -81,14 +81,11 @@ char* binaryReader::readString()
 
 char* binaryReader::readByte() {
 
-	std::vector<uint8_t> buffer(1);
-	uint8_t* p;
-	for (size_t i = 0; i < 1; i++) {
-		m_File.seekg(m_nPos);
-		buffer[i] = static_cast<uint8_t>(m_File.get());
-		m_nPos++;
-	}
-	return reinterpret_cast<char*>(buffer.at(0));
+	char buffer[1];
+	//m_File.seekg(m_nPos);
+	m_File.read(buffer, 1);
+	m_nPos++;
+	return buffer;
 }
 
 std::vector<uint8_t> binaryReader::readBytes(size_t numBytes) {

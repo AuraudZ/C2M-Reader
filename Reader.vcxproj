@@ -129,11 +129,11 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="binaryReader.cpp" />
-    <ClCompile Include="C2MReader.h" />
     <ClCompile Include="Reader.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="binaryReader.h" />
+    <ClInclude Include="C2MReader.h" />
     <ClInclude Include="Vector.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
